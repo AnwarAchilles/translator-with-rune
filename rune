@@ -1,0 +1,165 @@
+<?php
+/**
+ * Act. 1 - Understanding Its Flow  
+ * THE AWAKENING ✦
+ * 
+ * From the silence of nothingness, echoes rise from the void.
+ * A journey begins — with runes at your side.
+ * 
+ * Run this script using:
+ *   $ php {file}
+ *   $ php {file} grimoire
+ */
+require_once __DIR__ . '/vendor/autoload.php';
+
+
+
+/**
+ * I N V O C A T I O N
+ * 
+ * Step 1 — Summon the runes:  
+ * Import each module's manifest.
+ * 
+ * Step 2 — Channel the energy:  
+ * Initialize ether, essence, and entity.
+ * 
+ * Note: Keep #sentinel markers if you're using Sentinel support.
+ */
+use Rune\Aether\Manifest as Aether;
+use Rune\Whisper\Manifest as Whisper;
+use Rune\Weaver\Manifest as Weaver;
+use Rune\Chanter\Manifest as Chanter;
+use Rune\Forger\Manifest as Forger;
+use Rune\Cipher\Manifest as Cipher;
+use Rune\Crafter\Manifest as Crafter;
+use Rune\Keeper\Manifest as Keeper;
+use Rune\Specter\Manifest as Specter;
+#sentinel-manifest
+
+Aether::ether()::essence()::entity();
+Whisper::ether()::essence()::entity();
+Weaver::ether()::essence()::entity();
+Chanter::ether()::essence()::entity();
+Forger::ether()::essence()::entity();
+Cipher::ether()::essence()::entity();
+Crafter::ether()::essence()::entity();
+Keeper::ether()::essence()::entity();
+Specter::ether()::essence()::entity();
+#sentinel-awaken
+
+
+
+/**
+ * I N C A N T A T I O N
+ * 
+ * This is your working space.  
+ * Use begin() and end() to define the active logic scope.
+ */
+Aether::begin();
+Chanter::begin();
+Keeper::begin();
+
+// ✦ Main logic lives here
+
+
+// do translation
+Chanter::cast('translate', function() {
+  // scan all src
+  Forger::scan(__DIR__.'/src/', function($item) {
+    if (Chanter::spell('report')==true) {
+      // prepare report
+      $report = [];
+      // reporting
+      if (!file_exists(__DIR__.'/reporting.json')) {
+        Forger::item(__DIR__.'/reporting.json', "{}");
+      }
+      $reportFile = Forger::item(__DIR__.'/reporting.json');
+      $report = array_merge($report, json_decode($reportFile, true));
+    }
+
+    // filename
+    $filename = basename($item->target);
+    
+    // alert
+    Whisper::echo("{{color-default}} >> Processing $filename {{nl}}");
+
+    // load dataset
+    require __DIR__ . '/dataset.php';
+
+    // prepare variable
+    if (Chanter::spell('report')==true) {
+      $report[$filename] = [];
+    }
+    $targetSrc = $item->target;
+    $targetDist = str_replace(__DIR__.'/src/', __DIR__.'/dist/', $targetSrc);
+    $file = Forger::item($targetSrc);
+  
+    // do replacement
+    foreach ($x as $row) {
+      // variable
+      $search = $row[0];
+      $replacement = $row[1];
+      
+      // check
+      if (strpos($file, $search) !== false) {
+        $file = str_replace($search, $replacement, $file);
+        
+        // set report
+        if (Chanter::spell('report')==true) {
+          $report[$filename][$search] = $replacement;
+        }
+
+        // alert
+        Whisper::echo("{{tab}}{{color-success}} {{icon-success}} Successfully Replaced {{nl}}");
+        Whisper::echo("{{tab}}{{tab}}{{color-info}} Found Item: $search{{nl}}");
+        Whisper::echo("{{tab}}{{tab}}{{color-info}} Replaced: $replacement{{nl}}");
+      }
+    }
+  
+    // do save
+    Forger::item($targetDist, $file);
+    // do save report
+    if (Chanter::spell('report')==true) {
+      Forger::item(__DIR__.'/reporting.json', json_encode($report, JSON_PRETTY_PRINT));
+    }
+  });
+});
+
+
+
+// todo cleaning src & dist
+Chanter::cast('clean', function() {
+  // isolate src
+  Forger::repo(__DIR__.'/.isolate/');
+  Forger::clone(__DIR__.'/src/', __DIR__.'/.isolate/');
+
+  // do clean
+  Forger::clean(__DIR__.'/dist/', true);
+  Forger::clean(__DIR__.'/src/', true);
+
+  // rebuild repo
+  Forger::repo(__DIR__.'/dist/');
+  Forger::repo(__DIR__.'/src/');
+
+  // alert
+  Whisper::echo("{{color-success}}{{icon-success}} Successfully Cleaned src & dist {{nl}}");
+});
+
+
+
+// todo isolate only
+Chanter::cast('isolate', function() {
+  // isolate src
+  Forger::repo(__DIR__.'/.isolate/');
+  Forger::clone(__DIR__.'/src/', __DIR__.'/.isolate/');
+  
+  // alert
+  Whisper::echo("{{color-success}}{{icon-success}} Successfully Isolated src {{nl}}");
+});
+
+
+
+#sentinel-codex
+Keeper::end();
+Chanter::end();
+Aether::end();
