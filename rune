@@ -147,6 +147,33 @@ Chanter::cast('clean', function() {
 
 
 
+Chanter::cast('transfer', function() {
+  $target = __DIR__ . '/../staging_koop/';
+  
+  // do scan
+  Forger::scan(__DIR__ . '/dist/', function($item) use ($target) {
+    unlink($target . basename($item->target));
+    copy($item->target, $target . basename($item->target));
+  });
+
+  // alert
+  Whisper::echo("{{color-success}}{{icon-success}} Successfully Transfered {{nl}}");
+});
+
+
+// todo continue
+Chanter::cast('continue', function() {
+  // clean src
+  Forger::clean(__DIR__.'/src/', true);
+
+  // clone
+  Forger::clone(__DIR__.'/dist/', __DIR__.'/src/');
+
+  // re translate
+  Chanter::cast('translate')();
+});
+
+
 // todo isolate only
 Chanter::cast('isolate', function() {
   // isolate src
@@ -157,6 +184,44 @@ Chanter::cast('isolate', function() {
   Whisper::echo("{{color-success}}{{icon-success}} Successfully Isolated src {{nl}}");
 });
 
+
+// todo check app by app
+Chanter::cast('check', function() {
+  $app_indonesia = Forger::scan(__DIR__ . '/../staging_koop/', function($item) {
+    return $item->basename;
+  });
+  $app_malaysia = Forger::scan('C:\Users\User\Desktop\IKOOP\apexkoop\stagingTri', function($item) {
+    return $item->basename;
+  });
+
+  if (Chanter::spell('reverse')) {
+    // reverse app indo with malay
+    foreach ($app_malaysia as $id_item) {
+      if (in_array($id_item, $app_indonesia)) {
+        Whisper::echo("{{color-success}}{{icon-success}} $id_item {{nl}}");
+      }
+    }
+    foreach ($app_malaysia as $id_item) {
+      if (!in_array($id_item, $app_indonesia)) {
+        Whisper::echo("{{color-failed}}{{icon-failed}} $id_item {{nl}}");
+      }
+    }
+    Whisper::echo("{{color-default}} >> CHECK APP Indonesia with Malaysia {{nl}}");
+  }else {
+    // app malay with indo
+    foreach ($app_indonesia as $id_item) {
+      if (in_array($id_item, $app_malaysia)) {
+        Whisper::echo("{{color-success}}{{icon-success}} $id_item {{nl}}");
+      }
+    }
+    foreach ($app_indonesia as $id_item) {
+      if (!in_array($id_item, $app_malaysia)) {
+        Whisper::echo("{{color-failed}}{{icon-failed}} $id_item {{nl}}");
+      }
+    }
+    Whisper::echo("{{color-default}} >> CHECK APP Malaysia with Indonesia {{nl}}");
+  }
+});
 
 
 #sentinel-codex

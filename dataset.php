@@ -53,6 +53,66 @@ $x[] = [
   "' Kata Laluan Anggota Telah Di Set Semula - '",
   "' Kata Sandi Anggota Telah Direset - '",
 ];
+$x[] = [
+  '<script>alert("Kod pembiayaan : ',
+  '<script>alert("Kode pembiayaan : ',
+];
+$x[] = [
+  'tidak wujud...!");</script>',
+  'tidak Ada...!");</script>',
+];
+$x[] = [
+  'alert("Sila masukkan semua butiran pembiayaan");',
+  'alert("Silakan masukan semua detail pembiayaan");'
+];
+$x[] = [
+  '<script>alert("Sila masukkan no anggota");</script>',
+  '<script>alert("Silakan masukkan no anggota");</script>'
+];
+$x[] = [
+  ' tidak wujud/sah...!");</script>',
+  ' tidak Ada/Sah...!");</script>',
+];
+$x[] = [
+  'alert ("Terdapat permohonan pembiayaan belum siap diproses untuk anggota ini!");',
+  'alert ("Terdapat permohonan pembiayaan yang belum selesai diproses untuk anggota ini!");',
+];
+$x[] = [
+  'alert ("Permohonan pembiayaan telah didaftarkan ke dalam sistem. Pembiayaan yang dipohon memerlukan penjamin. Sila isikan borang penjamin.");',
+  'alert ("Permohonan pembiayaan telah didaftarkan ke dalam sistem. Pembiayaan yang diajukan memerlukan penjamin. Silakan isi formulir penjamin.");',
+];
+$x[] = [
+  'alert ("Permohonan pembiayaan telah didaftarkan ke dalam sistem. Pembiayaan yang dipohon memerlukan penjamin.");',
+  'alert ("Permohonan pembiayaan telah didaftarkan ke dalam sistem. Pembiayaan yang diajukan memerlukan penjamin.");',
+];
+$x[] = [
+  'Pastikan maklumat pendapatan dan perbelanjaan anggota dilengkapkan !<br><br>',
+  'Pastikan informasi pendapatan dan pengeluaran anggota dilengkapi !<br><br>',
+];
+$x[] = [
+  'Pastikan JUMLAH PERMOHONAN (RM)  / TEMPOH BAYARAN(BULAN) tidak melebihi JUMLAH PEMBIAYAAN (RM) / TEMPOH PEMBIAYAAN (BULAN) telah yang ditetapkan.<br><br>',
+  'Pastikan JUMLAH PERMOHONAN (RM) / JANGKA WAKTU PEMBAYARAN (BULAN) tidak melebihi JUMLAH PEMBIAYAAN (RM) / JANGKA WAKTU PEMBIAYAAN (BULAN) yang telah ditetapkan.<br><br>',
+];
+$x[] = [
+  'SILA KEMUKAKAN LAPORAN CCRIS DARIPADA BANK NEGARA UNTUK MEMUDAHKAH PROSES PERMOHONAN',
+  'SILAKAN AJUKAN LAPORAN CCRIS DARI BANK INDONESIA UNTUK MEMUDAHKAN PROSES PERMOHONAN',
+];
+$x[] = [
+  'Tidak Layak Memohon. Nisbah DSR melebihi 75%. / (SILA KEMASKINI MAKLUMAT PEMBIAYAAN ATAU GAJI TERKINI) Jumlah Maximum Bayaran Balik Bulanan yang dibenarkan RM ',
+  'Tidak Layak Mengajukan Permohonan. Rasio DSR melebihi 75%. / (SILAKAN PERBARUI INFORMASI PEMBIAYAAN ATAU GAJI TERBARU) Jumlah Maksimum Pembayaran Bulanan yang diizinkan RM',
+];
+$x[] = [
+  'Layak Memohon (Dalam Proses) dan DSR ',
+  'Layak Mengajukan Permohonan (Dalam Proses) dan DSR',
+];
+$x[] = [
+  'Tidak Layak Memohon Nisbah. DSR melebihi 50%. /  (SILA KEMASKINI MAKLUMAT PEMBIAYAAN ATAU GAJI TERKINI)Jumlah Maximum Bayaran Balik Bulanan yang dibenarkan RM ',
+  'Tidak Layak Mengajukan Permohonan. Rasio DSR melebihi 50%. / (SILAKAN PERBARUI INFORMASI PEMBIAYAAN ATAU GAJI TERBARU) Jumlah Maksimum Pembayaran Bulanan yang diizinkan RM',
+];
+$x[] = [
+  'Layak Memohon (Dalam Proses)',
+  'Layak Mengajukan (Dalam Proses)',
+];
 
 
 
@@ -66,16 +126,48 @@ $x[] = [
   "&nbsp;&nbsp;Tampil",
 ];
 $x[] = [
+  "Paparan <SELECT name=",
+  "Tampil <SELECT name=",
+];
+$x[] = [
+  "Paparan	<SELECT	name=",
+  "Tampil <SELECT name=",
+];
+$x[] = [
   "&nbsp;&nbsp;setiap mukasurat.",
   "&nbsp;&nbsp;setiap halaman.",
+];
+$x[] = [
+  "</select>setiap mukasurat.",
+  "</select>setiap halaman.",
+];
+$x[] = [
+  "</select> setiap mukasurat",
+  "</select> setiap halaman.",
+];
+$x[] = [
+  "</select> setiap	mukasurat.",
+  "</select>setiap halaman.",
 ];
 $x[] = [
   "Jumlah Rekod :",
   "Jumlah Data :",
 ];
 $x[] = [
+  "Jumlah	Rekod :",
+  "Jumlah Data :",
+];
+$x[] = [
   "Rekod Dari :",
   "Data Dari :",
+];
+$x[] = [
+  "Rekod	Dari :",
+  "Data Dari :",
+];
+$x[] = [
+  " Select All</td>",
+  " Pilih Semua</td>",
 ];
 
 
@@ -85,8 +177,24 @@ $x[] = [
   "Nomor Anggota",
 ];
 $x[] = [
+  "Nombor Voucher",
+  "Nomor Voucher",
+];
+$x[] = [
+  "Nombor Journal",
+  "Nomor Journal",
+];
+$x[] = [
+  "Nombor Rujukan - Kebajikan",
+  "Nomor Rujukan - Bantuan Sosial",
+];
+$x[] = [
   "Cawangan/Zon",
   "Cabang/Zona",
+];
+$x[] = [
+  "Cawangan/Kawasan/Zon",
+  "Cabang/Wilayah/Zona",
 ];
 $x[] = [
   "Tarikh Memohon",
@@ -127,6 +235,42 @@ $x[] = [
 $x[] = [
   'Akuan Hapus Kira',
   'Pernyataan Penghapusan'
+];
+$x[] = [
+  'Amaun (RM)',
+  'Jumlah (Rp)'
+];
+$x[] = [
+  'Baucer',
+  'Voucher'
+];
+$x[] = [
+  'Tarikh<br>Ditolak</div>',
+  'Tanggal<br>Ditolak</div>'
+];
+$x[] = [
+  'Tarikh<br>Lulus</div>',
+  'Tanggal<br>Disetujui</div>'
+];
+$x[] = [
+  'Tarikh<br>Mohon</div>',
+  'Tanggal<br>Pengajuan</div>'
+];
+$x[] = [
+  'Tarikh Memohon',
+  'Tanggal Mengajukan'
+];
+$x[] = [
+  'Tempoh (Bulan)',
+  'Jangka Waktu (Bulan)'
+];
+$x[] = [
+  'Nombor - Nama Anggota',
+  'Nomor - Nama Anggota'
+];
+$x[] = [
+  '* Ada Pembiayaan Rumah?<br/> (Kiraan DSR)',
+  '* Ada Pembiayaan Rumah?<br/> (Perhitungan DSR)',
 ];
 
 
@@ -175,6 +319,14 @@ $x[] = [
 $x[] = [
   'Alamat Cawangan',
   'Alamat Cabang'
+];
+$x[] = [
+  'Kod Kebajikan',
+  'Kode Kebajikan'
+];
+$x[] = [
+  'Tujuan Permohonan',
+  'Tujuan Pengajuan'
 ];
 $x[] = [
   'Poskod Kediaman',
@@ -260,6 +412,74 @@ $x[] = [
   "Jawatan Dalam Koperasi",
   "Jabatan Dalam Koperasi"
 ];
+$x[] = [
+  "Amaun Pengeluaran (RM)",
+  "Jumlah Pengeluaran (RP)"
+];
+$x[] = [
+  "* Kod Pembiayaan",
+  "* Kode Pembiayaan"
+];
+$x[] = [
+  "Kadar Keuntungan(%)",
+  "Tingkat Keuntungan (%)"
+];
+$x[] = [
+  "Tempoh Bayaran",
+  "Jangka Waktu Pembayaran"
+];
+$x[] = [
+  "Maklumat Perkiraan Pembiayaan",
+  "Informasi Perkiraan Pembiayaan"
+];
+$x[] = [
+  "Maklumat Perkiraan Pembiayaan",
+  "Informasi Perkiraan Pembiayaan"
+];
+$x[] = [
+  "Dokumen Sijil Komoditi",
+  "Dokumen Sertifikat Komoditas"
+];
+$x[] = [
+  "Maklumat Komoditi",
+  "Informasi Komoditas"
+];
+$x[] = [
+  "Tarikh Pembelian Sijil",
+  "Tanggal Pembelian Sertifikat"
+];
+$x[] = [
+  "Muat Naik Sijil Komoditi",
+  "Perbarui Sertifikat Komoditas"
+];
+$x[] = [
+  "Baki Awal Tahun ",
+  "Saldo Awal Tahun "
+];
+$x[] = [
+  "Masukkan Peratus Bayaran Dividen",
+  "Masukkan Persentase Pembayaran Dividen"
+];
+$x[] = [
+  "Peratus Dividen",
+  "Persentase Dividen"
+];
+$x[] = [
+  "Nama Carta Akaun",
+  "Nama Bagan Akun"
+];
+$x[] = [
+  "Kod Akaun",
+  "Kode Akun"
+];
+$x[] = [
+  "Nombor Rujukan",
+  "Nomor Rujukan"
+];
+$x[] = [
+  "Baki (RM)",
+  "Saldo (RM)"
+];
 
 
 
@@ -299,6 +519,22 @@ $x[] = [
   '<strong>* Nomor KTP sudah terdaftar.</strong>'
 ];
 $x[] = [
+  'value="+ Mohon Baru"',
+  'value="+ Pengajuan Baru"'
+];
+$x[] = [
+  'value="Hantar"',
+  'value="Kirim"'
+];
+$x[] = [
+  'value="Kira"',
+  'value="Hitung"'
+];
+$x[] = [
+  'Proses Permohonan&nbsp;',
+  'Proses Pengajuan&nbsp;'
+];
+$x[] = [
   'BORANG MENJADI ANGGOTA (* Mesti diisi untuk permohonan.)',
   'FORMULIR MENJADI ANGGOTA ( Harus diisi untuk permohonan.)*'
 ];
@@ -322,6 +558,39 @@ $x[] = [
   'MAKLUMAT BANK',
   'INFORMASI BANK'
 ];
+$x[] = [
+  'MAKLUMAT ANGGOTA',
+  'INFORMASI ANGGOTA'
+];
+$x[] = [
+  'PRA KELAYAKAN PERMOHONAN PEMBIAYAAN',
+  'PRA KELAYAKAN PENGAJUAN PEMBIAYAAN'
+];
+$x[] = [
+  'BAKI (RM)',
+  'SALDO (RM)'
+];
+$x[] = [
+  'ASSET BUKAN SEMASA',
+  'ASET TIDAK LANCAR'
+];
+$x[] = [
+  'ASSET SEMASA',
+  'ASET LANCAR'
+];
+$x[] = [
+  'LIABILITI BUKAN SEMASA',
+  'LIABILITAS JANGKA PANJANG'
+];
+$x[] = [
+  'LIABILITI SEMASA',
+  'LIABILITAS JANGKA PENDEK'
+];
+$x[] = [
+  'EKUITI',
+  'EKUITAS'
+];
+
 
 
 
