@@ -34,4 +34,4 @@ php rune isolate
 - create /src/ & /dist/
 - put the file in /src/
 - run command
-- result translation in /dist/
+- result translation in /dist/"# ikoop_rune" 
